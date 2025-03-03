@@ -5,11 +5,6 @@ use CodeIgniter\Router\RouteCollection;
 /**
  * @var RouteCollection $routes
  */
-// ROTAS Frontend
-// $routes->get('/', 'Home::index');
-$routes->get('/cadastro', 'ViewController::createPage');
-$routes->get('/login', 'ViewController::loginPage');
-$routes->get('/entrou', 'ViewController::entrouPage', ['filter' => 'authFilter']);
 
 // ROTAS CRUDS-CLIENTES Backend 
 $routes->post('/register', 'ClientesController::criarCliente');
@@ -25,9 +20,9 @@ $routes->put('/produtos/(:num)', 'ProdutosController::updateById/$1', ['filter' 
 $routes->get('/produtos', 'ProdutosController::findAll', ['filter' => 'authFilter']);
 
 // ROTAS CRUDS-PEDIDOS Backend
-$routes->post('/pedidos/(:num)', 'PedidoController::criarPedido/$1', ['filter' => 'authFilter']);
+$routes->post('/pedidos/(:num)', 'PedidoController::criarPedido/$1', ['filter' => 'authFilter:admin']);
 $routes->get('/pedidos', 'PedidoController::findAll', ['filter' => 'authFilter']);
 $routes->get('/pedidos/(:num)', 'PedidoController::findById/$1', ['filter' => 'authFilter']);
 $routes->delete('/pedidos/(:num)', 'PedidoController::deleteById/$1', ['filter' => 'authFilter']);
 $routes->put('/pedidos/(:num)', 'PedidoController::updateById/$1', ['filter' => 'authFilter']);
-$routes->post('/pedidos/adicionar-produto/(:num)', 'PedidoController::adicionarProduto/$1', ['filter' => 'authFilter']);  
+$routes->post('/pedidos/adicionar-produto/(:num)', 'PedidoController::adicionarProduto/$1', ['filter' => 'authFilter:admin']);  
