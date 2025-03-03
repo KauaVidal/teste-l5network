@@ -54,10 +54,21 @@ E com isso você está pronto para rodar o projeto !
 ```
 ## Funcionalidades
 
-- 
-- Preview em tempo real
-- Modo tela cheia
-- Multiplataforma
+- Cadastro de Clientes
+- Login de Clientes
+- Listagem de Clientes
+- Exclusão de Clientes
+- Atualização de Clientes
+- Cadastro de Produtos
+- Exclusão de Produtos
+- Atualização de Produtos
+- Listagem de Produtos
+- Criação de Pedidos
+- Listagem de Pedidos
+- Detalhamento de Pedidos
+- Exclusão de Pedidos
+- Atualização de Pedidos
+- Adição de Produtos em Pedidos
 
 
 ## Documentação da API
